@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "@emotion/styled";
-import Header from "../components/header";
-import MainContainer from "../components/container";
-import { MiddleContent } from "../components/content";
+import Header from "~/components/header";
+import MainContainer from "~/components/container";
+import { MiddleContent } from "~/components/content";
 import { useQuery } from "@tanstack/react-query";
 const HomeLayout = styled.div`
   section {

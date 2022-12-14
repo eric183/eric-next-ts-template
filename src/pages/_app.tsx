@@ -1,4 +1,5 @@
-import "../styles/globals.css";
+import "~/styles/globals.css";
+
 import type { AppProps } from "next/app";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
@@ -10,7 +11,8 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-export default function MyApp({ Component, pageProps }) {
+// getRandomInt();
+export default function MyApp({ Component, pageProps }: any) {
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
