@@ -6,7 +6,7 @@ const fetchPosts = async (limit = 10) => {
     method: "GET",
     url: "https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planet/list",
     headers: {
-      "X-RapidAPI-Key": "4b82398ae4msh192d185e1201fe4p1d2231jsn2de38ef98cd7",
+      "X-RapidAPI-Key": process.env.RAPID_API!,
       "X-RapidAPI-Host": "planets-info-by-newbapi.p.rapidapi.com",
     },
   };
