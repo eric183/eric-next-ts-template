@@ -20,6 +20,6 @@
       "public/*": ["./public/*"]
     }
   },
-  "include": [".eslintrc.js","next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "include": [".eslintrc.*","next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
   "exclude": ["node_modules", ".next"]
 }
