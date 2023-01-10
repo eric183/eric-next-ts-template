@@ -1,36 +1,37 @@
-{
-  "extends": [
+const ESLINT_CONFIG = {
+  extends: [
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ],
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  settings: {
+    react: {
+      version: "detect",
     },
-    "ecmaVersion": 12,
-    "sourceType": "module",
-    "project": ["tsconfig.json"]
   },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: "module",
+    tsconfigRootDir: __dirname,
+    project: ["tsconfig.json"],
+  },
+  plugins: ["react", "@typescript-eslint"],
+  rules: {
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto"
-      }
+        endOfLine: "auto",
+      },
     ],
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/interface-name-prefix": "off",
@@ -44,16 +45,13 @@
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
-  }
-}
+    "@next/next/no-page-custom-font": "off",
+  },
+};
 
-
-// {
-//   "extends": "next/core-web-vitals"
-// }
+module.exports = ESLINT_CONFIG;
